@@ -69,47 +69,61 @@
     .section {
       padding: 50px 20px;
       text-align: center;
-      position: relative;
     }
 
-    .wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100px;
-    }
-
-    .wave svg {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease-out;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .about, .team, .services, .discord {
+    .about, .team, .services {
       background: rgba(0, 0, 0, 0.7);
       margin: 20px 0;
       border-radius: 8px;
-      position: relative;
-      z-index: 1;
     }
 
-    .about p, .team .profile, .services .card, .discord p {
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.2rem;
       max-width: 800px;
       margin: auto;
+    }
+
+    .team .profile {
+      display: inline-block;
+      width: 200px;
+      margin: 20px;
       text-align: center;
+    }
+
+    .team .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      transition: transform 0.3s;
+    }
+
+    .team .profile img:hover {
+      transform: scale(1.1);
+    }
+
+    .team h3 {
+      margin: 10px 0 5px;
+    }
+
+    .services .card {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      width: 300px;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .services .card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
     }
 
     footer {
@@ -160,66 +174,50 @@
   <a href="#services">Explore Services</a>
 </header>
 
-<section id="about" class="section about fade-in">
+<section id="about" class="section about">
   <h2>About Us</h2>
-  <p>Welcome to Him. Studios! We specialize in creating custom scripts for your software needs.</p>
-  <div class="wave">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#2b1055" d="M0,160L1440,32L1440,0L0,0Z"></path>
-    </svg>
-  </div>
+  <p>Welcome to Him. Studios! We specialize in creating custom scripts for your software needs. Whether you're looking for basic scripts or advanced automation, we've got you covered — all at unbeatable prices!</p>
 </section>
 
-<section id="team" class="section team fade-in">
+<section id="team" class="section team">
   <h2>Our Team</h2>
   <div class="profile">
     <img src="https://via.placeholder.com/150" alt="Team Member 1">
     <h3>John Doe</h3>
     <p>Lead Developer</p>
   </div>
-  <div class="wave">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#7597de" d="M0,160L1440,96L1440,0L0,0Z"></path>
-    </svg>
+  <div class="profile">
+    <img src="https://via.placeholder.com/150" alt="Team Member 2">
+    <h3>Jane Smith</h3>
+    <p>Project Manager</p>
   </div>
 </section>
 
-<section id="services" class="section services fade-in">
+<section id="services" class="section services">
   <h2>Our Services</h2>
   <div class="card">
     <h3>Basic Scripts</h3>
     <p>Simple scripts for small tasks. £1-3</p>
   </div>
-  <div class="wave">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#2b1055" d="M0,256L1440,64L1440,0L0,0Z"></path>
-    </svg>
+  <div class="card">
+    <h3>Intermediate Scripts</h3>
+    <p>More robust scripts for moderate needs. £4-6</p>
+  </div>
+  <div class="card">
+    <h3>Advanced Scripts</h3>
+    <p>Complex solutions tailored to your needs. £7-10</p>
   </div>
 </section>
 
-<section id="discord" class="section discord fade-in">
+<section id="discord" class="section discord">
   <h2>Join Our Discord</h2>
   <p>Have questions or need support? Join our community on Discord!</p>
-  <a href="https://discord.gg/KzAzVmjrmr" target="_blank" style="color: #ff9800;">Join Now</a>
+  <a href="https://discord.gg/KzAzVmjrmr" target="_blank" style="color: #ff9800; text-decoration: none; font-size: 1.2rem;">Join Now</a>
 </section>
 
 <footer>
   <p>© 2024 Him. Studios | All Rights Reserved | <a href="#top">Back to Top</a></p>
 </footer>
-
-<script>
-  const faders = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  faders.forEach(fader => observer.observe(fader));
-</script>
 
 </body>
 </html>
