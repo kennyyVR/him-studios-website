@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Him. Studios - Affordable Scripting Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #2b1055, #7597de);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff9800;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      animation: fadeInDown 2s ease-in-out;
+    }
+
+    header p {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    header a {
+      display: inline-block;
+      padding: 15px 30px;
+      background: #ff9800;
+      color: #000;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      margin-top: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .about, .team, .services {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .team .profile {
+      display: inline-block;
+      width: 200px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .team .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      transition: transform 0.3s;
+    }
+
+    .team .profile img:hover {
+      transform: scale(1.1);
+    }
+
+    .team h3 {
+      margin: 10px 0 5px;
+    }
+
+    .services .card {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      width: 300px;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .services .card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    footer a {
+      color: #ff9800;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div>
+    <a href="#about">About Us</a>
+    <a href="#team">Our Team</a>
+    <a href="#services">Our Services</a>
+    <a href="#discord">Our Discord</a>
+  </div>
+</nav>
+
+<header>
+  <h1>Him. Studios</h1>
+  <p>Affordable Scripting Solutions, Starting at £1</p>
+  <a href="#services">Explore Services</a>
+</header>
+
+<section id="about" class="section about">
+  <h2>About Us</h2>
+  <p>Welcome to Him. Studios! We specialize in creating custom scripts for your software needs. Whether you're looking for basic scripts or advanced automation, we've got you covered — all at unbeatable prices!</p>
+</section>
+
+<section id="team" class="section team">
+  <h2>Our Team</h2>
+  <div class="profile">
+    <img src="https://via.placeholder.com/150" alt="Team Member 1">
+    <h3>John Doe</h3>
+    <p>Lead Developer</p>
+  </div>
+  <div class="profile">
+    <img src="https://via.placeholder.com/150" alt="Team Member 2">
+    <h3>Jane Smith</h3>
+    <p>Project Manager</p>
+  </div>
+</section>
+
+<section id="services" class="section services">
+  <h2>Our Services</h2>
+  <div class="card">
+    <h3>Basic Scripts</h3>
+    <p>Simple scripts for small tasks. £1-3</p>
+  </div>
+  <div class="card">
+    <h3>Intermediate Scripts</h3>
+    <p>More robust scripts for moderate needs. £4-6</p>
+  </div>
+  <div class="card">
+    <h3>Advanced Scripts</h3>
+    <p>Complex solutions tailored to your needs. £7-10</p>
+  </div>
+</section>
+
+<section id="discord" class="section discord">
+  <h2>Join Our Discord</h2>
+  <p>Have questions or need support? Join our community on Discord!</p>
+  <a href="https://discord.gg/example" target="_blank" style="color: #ff9800; text-decoration: none; font-size: 1.2rem;">Join Now</a>
+</section>
+
+<footer>
+  <p>© 2024 Him. Studios | All Rights Reserved | <a href="#top">Back to Top</a></p>
+</footer>
+
+</body>
+</html>
